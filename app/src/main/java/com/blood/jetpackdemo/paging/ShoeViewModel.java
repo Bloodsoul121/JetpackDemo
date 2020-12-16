@@ -19,10 +19,10 @@ public class ShoeViewModel extends ViewModel {
                 .build();
 
         // 非room数据库
-//        mShoes = new LivePagedListBuilder<>(new CustomPageDataSourceFactory(shoeDao), config).build();
+        mShoes = new LivePagedListBuilder<>(new CustomPageDataSourceFactory(shoeDao), config).build();
 
         // 配合room，只需要 shoeDao.queryShoes()
-        mShoes = new LivePagedListBuilder<>(shoeDao.queryShoes(), config).build();
+//        mShoes = new LivePagedListBuilder<>(shoeDao.queryShoes(), config).build();
     }
 
     public LiveData<PagedList<Shoe>> getShoes() {
