@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
@@ -18,7 +19,7 @@ public interface UserDao {
     //我们所有对数据库的操作都在Dao里声明
 
     // 这些修饰词会在编译时候生成代码
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertUsers(User... users);   // 如果是一个参数就写 User user，多个参数就这样写
 
     @Update

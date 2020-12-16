@@ -9,9 +9,11 @@ import androidx.room.migration.Migration;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
 import com.blood.jetpackdemo.MainApplication;
+import com.blood.jetpackdemo.paging.Shoe;
+import com.blood.jetpackdemo.paging.ShoeDao;
 
 @TypeConverters({Converters.class})
-@Database(entities = {User.class}, version = 3, exportSchema = false)
+@Database(entities = {User.class, Shoe.class}, version = 5, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static final String DB_NAME = "app.db";
@@ -52,5 +54,7 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     public abstract UserDao getUserDao();
+
+    public abstract ShoeDao getShoeDao();
 
 }

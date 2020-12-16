@@ -27,4 +27,8 @@ public class MainActivity extends AppCompatActivity {
     public void clickBtn3(View view) {
         startActivity(new Intent(this, DataBindingActivity.class));
     }
+
+    public void clickBtn4(View view) {
+        startActivity(new Intent(this, PagingActivity.class));
+    }
 }

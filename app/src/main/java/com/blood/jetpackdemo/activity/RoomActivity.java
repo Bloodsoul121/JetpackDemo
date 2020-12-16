@@ -48,6 +48,13 @@ public class RoomActivity extends AppCompatActivity {
         mLastUser = user;
     }
 
+    public void insertSample(View view) {
+        mLastUser.name = "name" + mRandom.nextInt(100);
+        mLastUser.age = mRandom.nextInt(50);
+        mLastUser.vip = mRandom.nextBoolean();
+        mUserDao.insertUsers(mLastUser);
+    }
+
     public void queryAll(View view) {
         StringBuilder sb = new StringBuilder();
         List<User> allUsers = mUserDao.queryAllUsers();
