@@ -17,7 +17,12 @@ public class ShoeViewModel extends ViewModel {
                 .setEnablePlaceholders(true)
                 .setInitialLoadSizeHint(10)
                 .build();
-        mShoes = new LivePagedListBuilder<>(new CustomPageDataSourceFactory(shoeDao), config).build();
+
+        // 非room数据库
+//        mShoes = new LivePagedListBuilder<>(new CustomPageDataSourceFactory(shoeDao), config).build();
+
+        // 配合room，只需要 shoeDao.queryShoes()
+        mShoes = new LivePagedListBuilder<>(shoeDao.queryShoes(), config).build();
     }
 
     public LiveData<PagedList<Shoe>> getShoes() {

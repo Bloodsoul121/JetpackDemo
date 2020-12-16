@@ -1,5 +1,6 @@
 package com.blood.jetpackdemo.paging;
 
+import androidx.paging.DataSource;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
@@ -21,5 +22,8 @@ public interface ShoeDao {
 
     @Query("DELETE FROM shoes")
     void deleteAllShoes();
+
+    @Query("SELECT * FROM shoes")
+    DataSource.Factory<Integer, Shoe> queryShoes();
 
 }
