@@ -14,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackDemo">
+        <activity android:name=".activity.NavigationActivity"></activity>
         <activity android:name=".activity.PagingActivity" />
         <activity android:name=".activity.DataBindingActivity" />
         <activity android:name=".activity.RoomActivity" />

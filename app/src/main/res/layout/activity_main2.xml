@@ -38,4 +38,12 @@
         android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickBtn5"
+        android:text="Navigation"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>

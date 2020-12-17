@@ -31,4 +31,8 @@ public class MainActivity extends AppCompatActivity {
     public void clickBtn4(View view) {
         startActivity(new Intent(this, PagingActivity.class));
     }
+
+    public void clickBtn5(View view) {
+        startActivity(new Intent(this, NavigationActivity.class));
+    }
 }
