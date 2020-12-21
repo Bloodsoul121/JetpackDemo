@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-    implementation 'com.blankj:utilcodex:1.30.4'
+    implementation 'com.blankj:utilcodex:1.30.5'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
@@ -79,9 +79,12 @@ dependencies {
     implementation "androidx.paging:paging-common:$paging_version"
     implementation "androidx.paging:paging-runtime:$paging_version"
 
-    def navigationVersion = "2.0.0"
+    def navigationVersion = "2.3.2"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    def workVersion = "2.4.0"
+    implementation "androidx.work:work-runtime-ktx:$workVersion"
 }
 
 repositories {
