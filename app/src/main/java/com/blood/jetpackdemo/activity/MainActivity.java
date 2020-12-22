@@ -35,4 +35,8 @@ public class MainActivity extends AppCompatActivity {
     public void clickBtn5(View view) {
         startActivity(new Intent(this, NavigationActivity.class));
     }
+
+    public void clickBtn6(View view) {
+        startActivity(new Intent(this, CoroutinesActivity.class));
+    }
 }

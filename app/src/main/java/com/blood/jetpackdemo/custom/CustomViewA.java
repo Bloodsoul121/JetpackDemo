@@ -43,6 +43,12 @@ public class CustomViewA extends View {
     }
 
     @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        Log.i(TAG, "CustomViewA: onAttachedToWindow");
+    }
+
+    @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         Log.i(TAG, "CustomViewA: onMeasure");
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
