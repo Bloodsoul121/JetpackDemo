@@ -1,12 +1,13 @@
 package com.blood.jetpackdemo.activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.blood.jetpackdemo.R;
+import com.blood.jetpackdemo.live.LiveActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,5 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickBtn6(View view) {
         startActivity(new Intent(this, CoroutinesActivity.class));
+    }
+
+    public void clickBtn7(View view) {
+        startActivity(new Intent(this, LiveActivity.class));
     }
 }

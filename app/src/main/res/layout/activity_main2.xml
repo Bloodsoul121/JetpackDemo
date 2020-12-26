@@ -54,4 +54,12 @@
         android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickBtn7"
+        android:text="测试 LiveFragment 生命周期"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>
