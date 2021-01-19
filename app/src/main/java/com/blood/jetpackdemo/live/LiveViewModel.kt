@@ -25,6 +25,10 @@ class LiveViewModel : ViewModel() {
         data.value = 123
     }
 
-    val data = MutableLiveData<Int>()
+    val data = MutableLiveData<Long>()
+
+    fun setData(timestamp: Long) {
+        data.value = timestamp
+    }
 
 }

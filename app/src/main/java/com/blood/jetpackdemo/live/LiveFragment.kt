@@ -58,7 +58,12 @@ class LiveFragment : Fragment() {
         textView = rootView!!.findViewById(R.id.text)
         println("$this onActivityCreated $textView")
 
-        ViewModelProvider(this).get(LiveViewModel::class.java).data.observe(viewLifecycleOwner, Observer {
+//        ViewModelProvider(this).get(LiveViewModel::class.java).data.observe(viewLifecycleOwner, Observer {
+//            println("$this data $it")
+//        })
+
+        // 自定义 ViewModelStoreOwner
+        ViewModelProvider (LiveSingleton.getInstance().liveViewModelStoreOwner).get(LiveViewModel::class.java).data.observe(viewLifecycleOwner, Observer {
             println("$this data $it")
         })
     }
@@ -77,9 +82,12 @@ class LiveFragment : Fragment() {
         super.onDetach()
         println("$this onDetach")
 
-        handler.postDelayed({
-            textView.text = "123456\n789456"
-        }, 2000)
+//        handler.postDelayed({
+//            textView.text = "123456\n789456"
+////            Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show() // 会崩掉 context空指针
+//        }, 2000)
+
+        ViewModelProvider (LiveSingleton.getInstance().liveViewModelStoreOwner).get(LiveViewModel::class.java).setData(System.currentTimeMillis())
     }
 
     /**

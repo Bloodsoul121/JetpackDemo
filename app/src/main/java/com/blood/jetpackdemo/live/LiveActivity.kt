@@ -17,7 +17,7 @@ class LiveActivity : AppCompatActivity() {
         var fragment: LiveFragment? = supportFragmentManager.findFragmentByTag(TAG_LIVE_FRAGMENT) as LiveFragment?
         if (fragment == null) {
             fragment = LiveSingleton.getInstance().liveFragment ?: LiveFragment()
-            LiveSingleton.getInstance().liveFragment = fragment
+//            LiveSingleton.getInstance().liveFragment = fragment
         }
         supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment, TAG_LIVE_FRAGMENT).commit()
     }

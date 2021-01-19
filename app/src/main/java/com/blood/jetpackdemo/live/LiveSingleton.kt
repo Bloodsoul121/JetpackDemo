@@ -1,5 +1,8 @@
 package com.blood.jetpackdemo.live
 
+import androidx.lifecycle.ViewModelStore
+import androidx.lifecycle.ViewModelStoreOwner
+
 
 /*
  *  @项目名：  JetpackDemo 
@@ -23,5 +26,17 @@ class LiveSingleton private constructor() {
     }
 
     var liveFragment: LiveFragment? = null
+
+    val liveViewModelStoreOwner = LiveViewModelStoreOwner()
+
+    class LiveViewModelStoreOwner : ViewModelStoreOwner {
+
+        private val viewModelStore = ViewModelStore()
+
+        override fun getViewModelStore(): ViewModelStore {
+            return viewModelStore
+        }
+
+    }
 
 }
