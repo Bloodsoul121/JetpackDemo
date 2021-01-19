@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".activity.MainActivity">
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn1"
         android:text="Jetpack"
@@ -15,7 +16,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn2"
         android:text="Room"
@@ -23,7 +24,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn3"
         android:text="DataBinding"
@@ -31,7 +32,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn4"
         android:text="Paging 2.0"
@@ -39,7 +40,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn5"
         android:text="Navigation"
@@ -47,7 +48,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn6"
         android:text="Coroutines"
@@ -55,7 +56,7 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="clickBtn7"
         android:text="测试 LiveFragment 生命周期"
