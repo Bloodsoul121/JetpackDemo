@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">JetpackDemo</string>
+
+    <string name="home">Home</string>
+    <string name="deeplink">Deep Link</string>
+    <string name="settings">Settings</string>
 </resources>
