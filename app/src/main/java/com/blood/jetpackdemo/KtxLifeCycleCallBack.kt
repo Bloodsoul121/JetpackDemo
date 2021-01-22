@@ -1,13 +1,11 @@
 package com.blood.jetpackdemo
 
-import android.annotation.TargetApi
 import android.app.Activity
 import android.app.Application.ActivityLifecycleCallbacks
-import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.util.Log
 
-public class KtxLifeCycleCallBack : ActivityLifecycleCallbacks {
+class KtxLifeCycleCallBack : ActivityLifecycleCallbacks {
 
     private val TAG: String = "KtxLifeCycleCallBack"
 
