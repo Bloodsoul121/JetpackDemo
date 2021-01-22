@@ -40,7 +40,7 @@
             android:name="arg"
             android:defaultValue="arg"
             app:argType="string" />
-        <deepLink app:uri="www.example.com/{arg}" />
+        <deepLink app:uri="www.blood.com/{arg}" />
     </fragment>
     <fragment
         android:id="@+id/settingFragment"
