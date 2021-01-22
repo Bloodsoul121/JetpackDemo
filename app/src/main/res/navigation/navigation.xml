@@ -32,4 +32,18 @@
             android:defaultValue="2005@qq.com"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/deepLinkFragment"
+        android:name="com.blood.jetpackdemo.navigation.DeepLinkFragment"
+        android:label="DeepLinkFragment" >
+        <argument
+            android:name="arg"
+            android:defaultValue="arg"
+            app:argType="string" />
+        <deepLink app:uri="www.example.com/{arg}" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.blood.jetpackdemo.navigation.SettingFragment"
+        android:label="SettingFragment" />
 </navigation>
