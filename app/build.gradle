@@ -5,6 +5,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'com.google.protobuf'
 
 android {
     compileSdkVersion 30
@@ -44,6 +45,15 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    sourceSets {
+        main {
+            proto {
+                srcDir 'src/main/proto'
+                include '**/*.proto'
+            }
+        }
     }
 }
 
@@ -105,9 +115,30 @@ dependencies {
     // 协程
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
 
-//    implementation "androidx.datastore:datastore-core:1.0.0-alpha05"
     implementation "androidx.datastore:datastore-preferences:1.0.0-alpha05"
     implementation "androidx.datastore:datastore-preferences-core:1.0.0-alpha05"
+    implementation "androidx.datastore:datastore:1.0.0-alpha05"
+    implementation "androidx.datastore:datastore-core:1.0.0-alpha05"
+    implementation "com.google.protobuf:protobuf-javalite:3.10.0"
+}
+
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.10.0"
+    }
+
+    // Generates the java Protobuf-lite code for the Protobufs in this project. See
+    // https://github.com/google/protobuf-gradle-plugin#customizing-protobuf-compilation
+    // for more information.
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                java {
+                    option 'lite'
+                }
+            }
+        }
+    }
 }
 
 repositories {
