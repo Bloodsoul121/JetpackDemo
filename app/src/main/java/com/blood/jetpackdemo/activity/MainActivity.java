@@ -52,4 +52,8 @@ public class MainActivity extends AppCompatActivity {
     public void clickBtn9(View view) {
         startActivity(new Intent(this, ViewBindingActivity.class));
     }
+
+    public void clickBtn10(View view) {
+        startActivity(new Intent(this, DataStoreActivity.class));
+    }
 }
