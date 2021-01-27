@@ -48,4 +48,8 @@ public class MainActivity extends AppCompatActivity {
     public void clickBtn8(View view) {
         startActivity(new Intent(this, WorkManagerActivity.class));
     }
+
+    public void clickBtn9(View view) {
+        startActivity(new Intent(this, ViewBindingActivity.class));
+    }
 }
