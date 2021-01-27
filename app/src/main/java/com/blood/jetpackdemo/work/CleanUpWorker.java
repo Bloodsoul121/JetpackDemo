@@ -21,7 +21,7 @@ public class CleanUpWorker extends Worker {
         try {
 
             // do clean
-            Log.i(TAG, "doWork: CleanUp");
+            Log.i(TAG, Thread.currentThread().getName() + " doWork: CleanUp");
 
             return Result.success();
         } catch (Exception e) {

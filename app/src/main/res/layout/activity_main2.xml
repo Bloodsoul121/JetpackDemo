@@ -63,4 +63,12 @@
         android:textAllCaps="false"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickBtn8"
+        android:text="WorkManager"
+        android:textAllCaps="false"
+        tools:ignore="HardcodedText" />
+
 </LinearLayout>
