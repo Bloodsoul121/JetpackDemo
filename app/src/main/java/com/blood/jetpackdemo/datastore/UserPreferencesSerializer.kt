@@ -1,4 +1,4 @@
-package com.blood.jetpackdemo.database
+package com.blood.jetpackdemo.datastore
 
 import androidx.datastore.core.Serializer
 import cn.zzw.datastore.UserPreferences

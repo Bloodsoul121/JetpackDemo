@@ -10,7 +10,7 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.createDataStore
 import androidx.lifecycle.lifecycleScope
-import com.blood.jetpackdemo.database.UserPreferencesSerializer
+import com.blood.jetpackdemo.datastore.UserPreferencesSerializer
 import com.blood.jetpackdemo.databinding.ActivityDataStoreBinding
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.first
